@@ -33,6 +33,6 @@ After experimenting with a couple of different methods of arranging the results 
 
 1040384 15-bit values from Python's cryptographic secrets library, lag = 2 embed = 3:
 
-[Python secrets lib YouTube video](https://www.youtube.com/watch?v=TaBDv-PYDeU&list=PLmvtGH47UObJrzqodX92Ts8d4WSn-R4kX&index=3)
+[Python secrets lib YouTube video](https://www.youtube.com/watch?v=432sV0NgdiU&list=PLmvtGH47UObJrzqodX92Ts8d4WSn-R4kX&index=4&t=0s)
 
 ![python secrets library 15-bit screenshot](https://github.com/GregoryVPerry/chaotic/raw/master/python_secrets_prng_15bit.png "chaotic: 15-bit dataset from python secrets library")
