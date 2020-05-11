@@ -1,6 +1,8 @@
 # chaotic
 3D Phase Space Visualization of a Quantum Random Number Generator (work in progress...)
 
+[[Reddit discussion thread](https://www.reddit.com/r/QuantumComputing/comments/ggjxrh/what_if_quantum_wasnt_really_random/)]
+
 Borrowed from the field of nonlinear dynamical systems analysis (chaos theory), [phase space analysis](https://en.wikipedia.org/wiki/Phase_space) is used to find [attractors](https://en.wikipedia.org/wiki/Attractor) / [limit cycles](https://en.wikipedia.org/wiki/Limit_cycle) within highly entropic datasets. The method of phase space reconstruction currently used by this tool is based on the [Takens' delay embedding theorem](https://en.wikipedia.org/wiki/Takens%27s_theorem), using a default lag length of 2 and embedding dimension of 3. Both variables are configurable for purposes of creating the reconstruction plot. In essense, the stream of RNG-derived values are treated as a time-series sequence which are then used as x/y/z coordinate vectors to create a navigable 3D point cloud / scatter plot that represents all observed states of the dynamical system.
 
 A lot of assumptions are being made about the true randomness of quantum systems without any real testing, so this is the result of a few day quarantine sprint to see if any visual indicators of a pattern (attractors) emerge from repeated sampling of a 15 qubit Hadamard gate quantum Random Number Generator (RNG) circuit running on IBM's quantum computer in Melbourne (ibmq_16_melbourne).
