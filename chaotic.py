@@ -2,7 +2,7 @@
 
 # chaotic: 3D phase space visualization of an n-dimensional dataset
 #
-# copyright 2020 Gregory V. Perry || GregoryVPerry@pm.me
+# copyright 2020 - 2023 Gregory V. Perry || GregoryVPerry@protonmail.com
 #
 # LICENSE: you are free to use this source code in any way you want, as long as you give me a shout out with
 #          my email address on any deriviative code implementation and/or published research that follows.
