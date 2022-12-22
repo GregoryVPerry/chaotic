@@ -1,30 +1,24 @@
 #!/usr/bin/python3
+'''
+quantumRNG: dump 8192 int15 values from IBM Q quantum computer
 
-# quantumRNG: dump 8192 int15 values from IBM Q quantum computer
-#
-# portions of code borrowed from Russell Huffman's Quantum Dice
-# https://qiskit.org/experiments/quantum-dice/
-#
-# 1) install Qiskit (IBM Quantum services library)
-# 2) sign up for an account at https://quantum-computing.ibm.com
-# 3) login to IBM Quantum, top right My Account -> Copy token
-# 4) >>> import qiskit as qk
-# 5) >>> qk.IBMQ.save_account('YOUR_TOKEN')
-#
+portions of code borrowed from Russell Huffman's Quantum Dice
+https://qiskit.org/experiments/quantum-dice/
+
+1) install Qiskit (IBM Quantum services library)
+2) sign up for an account at https://quantum-computing.ibm.com
+3) login to IBM Quantum, top right My Account -> Copy token
+4) >>> import qiskit as qk
+5) >>> qk.IBMQ.save_account('YOUR_TOKEN')
+'''
 
 import sys
 import numpy as np
 from qiskit import (
     QuantumCircuit,
     execute,
-    Aer,
-    IBMQ,
-    ClassicalRegister,
-    QuantumRegister,
-)
-from qiskit.compiler import transpile, assemble
-from qiskit.visualization import *
-from qiskit.quantum_info import Pauli, state_fidelity, basis_state, process_fidelity
+    IBMQ
+    )
 
 # load IBM Q creds
 provider = IBMQ.load_account()
@@ -42,8 +36,8 @@ qc.measure(
 
 # assign quantum backend and dispatch circuit
 backend = provider.get_backend(sys.argv[1])
-shots = 8192
-job = execute(qc, backend, shots=shots, memory=True)
+SHOTS = 8192
+job = execute(qc, backend, shots=SHOTS, memory=True)
 
 
 memory = []  # destination list of 15-bit values sampled from quantum circuit
