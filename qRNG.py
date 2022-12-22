@@ -22,25 +22,11 @@ from qiskit.quantum_info import Pauli, state_fidelity, basis_state, process_fide
 # load IBM Q creds
 provider = IBMQ.load_account()
 
-
 # create a 15 qubit quantum circuit with H gates (Hadamard gates) on each 
 qc = QuantumCircuit(15, 15)
-qc.h(0)
-qc.h(1)
-qc.h(2)
-qc.h(3)
-qc.h(4)
-qc.h(5)
-qc.h(6)
-qc.h(7)
-qc.h(8)
-qc.h(9)
-qc.h(10)
-qc.h(11)
-qc.h(12)
-qc.h(13)
-qc.h(14)
 
+for i in range(15):
+    qc.h(i)
 
 qc.measure([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
     
